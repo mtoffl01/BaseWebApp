@@ -5,16 +5,19 @@ body {
 }
 
 h1 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Arial', cursive;
   color: orange;
 }
 
 p {
-  font-family: "Courier New";
+  font-family: "Arial";
   font-size: 30px;
 }
 
-#doge-image img {
-  height: 140px;
+#submit-image img {
+  width: auto;
+  height: 100px;
   margin-top: 20px;
 }
+
+
