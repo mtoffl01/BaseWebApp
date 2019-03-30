@@ -25,4 +25,17 @@
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <!-- then our app's own js file -->
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "``<%= process.env.API_KEY %>``",
+    authDomain: "messageboard-ca6c8.firebaseapp.com",
+    databaseURL: "https://messageboard-ca6c8.firebaseio.com",
+    projectId: "messageboard-ca6c8",
+    storageBucket: "messageboard-ca6c8.appspot.com",
+    messagingSenderId: "969052427718"
+  };
+  firebase.initializeApp(config);
+</script>
 <script src="js/main.js"></script>
