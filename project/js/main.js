@@ -1,5 +1,5 @@
 
-function clickButton() {
+function handleMessageFormSubmit() {
   // use jQuery ($ is shorthand) to find the div on the page and then change the html
   // jQuery can do a lot of crazy stuff so make sure to google around to find out more
 
@@ -11,17 +11,17 @@ function clickButton() {
 };
 
 function loginButton() {
-	if (!firebase.auth().currentUser) {//if user not logged in, handle login
-		var provider = new firebase.auth.GoogleAuthProvider();
-		provider.addScope('https://www.googleapis.com/auth/plus.login');
-		firebase.auth().signInWithPopup(provider).then(function(result) {
-			console.log("success");
-		}).catch(function(error) {
-			console.error("error", error);
-		});
-	} else { //handle logout
-		firebase.auth().signOut();
-	}
+    if (!firebase.auth().currentUser) { // if the user's not logged in, handle login
+      var provider = new firebase.auth.GoogleAuthProvider();
+      provider.addScope('https://www.googleapis.com/auth/plus.login');
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        console.log("success");
+      }).catch(function(error) {
+        console.error("error", error);
+      });
+    } else { // handle logout
+      firebase.auth().signOut();
+    }
 	//This disables th ebutton until login or logout is successful.
 	$('#btn-login').attr("disabled", true);
 }
